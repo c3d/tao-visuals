@@ -7,14 +7,14 @@
 
 module_description
     id "6F1C6EE1-F153-4E57-8B46-CEFB7F7BD338"
-    name "Tao Visuals"
+    name "Tao visuals"
     description "A collection of icons, logos and pictures related to Taodyne and Tao Presentations"
     import_name "TaoVisuals"
     version "0.1"
 
 
 //
-// Module settings
+// Settings
 //
 
 // Preferred language.
@@ -29,16 +29,25 @@ tv_language := "en"
 tv_tagline := "geeks"
 
 //
-// Module functions
+// Commands
 //
 
 // Draw the logo centered at (0, 0)
-tv_taodyne_logo -> tv_taodyne_logo 0, 0, 50%, 50%
+tv_taodyne_logo -> tv_taodyne_logo 0, 0
 
+
+// Draw the logo centered at (x, y)
+tv_taodyne_logo x:real, y:real ->
+    tv_taodyne_logo x, y, 400, 200
+
+// Draw the logo centered at (x, y) to fit in bounding box (w, h)
 tv_taodyne_logo x:real, y:real, w:real, h:real ->
     locally
         color 1, 1, 1, 1
-        image x, y, w, h, tv_taodyne_logo_file
+        wh := tv_resize(w, h, tv_logo_native_x, tv_logo_native_y)
+        iw := tv_take_first wh
+        ih := tv_take_second wh
+        image_px x, y, iw, ih, tv_logo_file
 
 
 //
@@ -48,7 +57,9 @@ tv_taodyne_logo x:real, y:real, w:real, h:real ->
 // "svg" or "png"
 tv_img_format := "svg"
 
-tv_taodyne_logo_file ->
+// Return the name of the Taodyne logo file, based on module settings
+// (language, etc.)
+tv_logo_file ->
     if tv_tagline = "none" then
         "image:Taodyne_logo." & tv_img_format
     else
@@ -57,5 +68,25 @@ tv_taodyne_logo_file ->
         else
             "image:Taodyne_" & tv_tagline & "_" & tv_language & "." & tv_img_format
 
+// The native size (in pixels) of the logo
+tv_logo_size -> image_size tv_logo_file
+tv_logo_native_x -> tv_take_first tv_logo_size
+tv_logo_native_y -> tv_take_second tv_logo_size
+
+// Image resizing
+// Return (X, Y) with the same aspect ratio as (x, y) such that (X, Y) fits in
+// the (xmax, ymax) bounding box
+tv_resize xmax:real, ymax:real, x:real, y:real ->
+    r1 := x/y
+    r2 := xmax/ymax
+    if r1 > r2 then
+        xmax, xmax*y/x
+    else
+        ymax*x/y, ymax
+
 // Adding this module's images/ directory to the image: search path for the current document
 add_search_path "image:", module_dir & "/images"
+
+// Helpers
+tv_take_first (x, y) -> x
+tv_take_second (x, y) -> y
