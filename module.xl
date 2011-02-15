@@ -1,0 +1,61 @@
+// TaoVisuals module definition
+//
+// This module contains a number of graphical elements related to Taodyne
+// and Tao Presentations.
+//
+// Copyright 2011 Taodyne
+
+module_description
+    id "6F1C6EE1-F153-4E57-8B46-CEFB7F7BD338"
+    name "Tao Visuals"
+    description "A collection of icons, logos and pictures related to Taodyne and Tao Presentations"
+    import_name "TaoVisuals"
+    version "0.1"
+
+
+//
+// Module settings
+//
+
+// Preferred language.
+// Values: "en" (english), "fr" (french)
+tv_language := "en"
+
+// Choose the tagline under the Taodyne logo.
+// Values:
+//   "geeks" Presentation Software for Geeks
+//   "dev"   Develop your ideas
+//   "none"  No tagline
+tv_tagline := "geeks"
+
+//
+// Module functions
+//
+
+// Draw the logo centered at (0, 0)
+tv_taodyne_logo -> tv_taodyne_logo 0, 0, 50%, 50%
+
+tv_taodyne_logo x:real, y:real, w:real, h:real ->
+    locally
+        color 1, 1, 1, 1
+        image x, y, w, h, tv_taodyne_logo_file
+
+
+//
+// Internal
+//
+
+// "svg" or "png"
+tv_img_format := "svg"
+
+tv_taodyne_logo_file ->
+    if tv_tagline = "none" then
+        "image:Taodyne_logo." & tv_img_format
+    else
+        if tv_tagline = "geeks" then
+            "image:Taodyne_geeks_en." & tv_img_format
+        else
+            "image:Taodyne_" & tv_tagline & "_" & tv_language & "." & tv_img_format
+
+// Adding this module's images/ directory to the image: search path for the current document
+add_search_path "image:", module_dir & "/images"
