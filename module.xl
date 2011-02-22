@@ -32,19 +32,29 @@ tv_tagline := "geeks"
 // Commands
 //
 
-// Draw the logo centered at (0, 0)
-tv_taodyne_logo -> tv_taodyne_logo 0, 0
+tv_taodyne_logo ->
+    /** Draws the Taodyne logo centered at the origin.
+     module.TaoVisuals
+     **/
+    tv_taodyne_logo 0, 0
 
-
-// Draw the logo centered at (x, y)
 tv_taodyne_logo x:real, y:real ->
+    /** Draws and translates the Taodyne logo.
+     module.TaoVisuals
+     The logo is centered at (@a x, @a y).
+     **/
     tv_taodyne_logo x, y, 400, 200
 
 // Draw the logo centered at (x, y) to fit in bounding box (w, h)
-tv_taodyne_logo x:real, y:real, w:real, h:real ->
+tv_taodyne_logo x:real, y:real, width:real, height:real ->
+    /** Draws, scales and translates the Taodyne logo.
+     module.TaoVisuals
+     The logo is centered at (@a x, @a y) and scaled to fit in a
+     rectangle of size (@a width x @a height).
+     **/
     locally
         color 1, 1, 1, 1
-        wh := tv_resize(w, h, tv_logo_native_x, tv_logo_native_y)
+        wh := tv_resize(width, height, tv_logo_native_x, tv_logo_native_y)
         iw := tv_take_first wh
         ih := tv_take_second wh
         image_px x, y, iw, ih, tv_logo_file
