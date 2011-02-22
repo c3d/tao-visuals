@@ -32,27 +32,131 @@ tv_tagline := "geeks"
 // Commands
 //
 
-// Draw the logo centered at (0, 0)
-tv_taodyne_logo -> tv_taodyne_logo 0, 0
+tv_taodyne_logo ->
+    /** Draws the Taodyne logo centered at the origin.
+     module.TaoVisuals
+     **/
+    tv_taodyne_logo 0, 0
 
-
-// Draw the logo centered at (x, y)
-tv_taodyne_logo x:real /** x-coordinate of the logo's center **/ , y:real /** y-coordinate of the logo's center **/  ->
-    /**  Draw the logo centered at (x, y)
-         TaoVisuals
-         Draw the logo centered at (x, y) with 400 and 200 as width and height of the bounding box.
+tv_taodyne_logo x:real, y:real ->
+    /** Draws and translates the Taodyne logo.
+     module.TaoVisuals
+     The logo is centered at (@a x, @a y). It is 400 pixels wide by 200 pixels
+     high.
      **/
     tv_taodyne_logo x, y, 400, 200
 
 // Draw the logo centered at (x, y) to fit in bounding box (w, h)
-tv_taodyne_logo x:real, y:real, w:real, h:real ->
+tv_taodyne_logo x:real, y:real, width:real, height:real ->
+    /** Draws, scales and translates the Taodyne logo.
+     module.TaoVisuals
+     The logo is centered at (@a x, @a y) and scaled to fit in a
+     rectangle of size (@a width x @a height).
+     **/
     locally
         color 1, 1, 1, 1
-        wh := tv_resize(w, h, tv_logo_native_x, tv_logo_native_y)
+        wh := tv_resize(width, height, tv_logo_native_x, tv_logo_native_y)
         iw := tv_take_first wh
         ih := tv_take_second wh
         image_px x, y, iw, ih, tv_logo_file
 
+// Tao logo color palette
+
+color "tao_red" ->
+    /** Sets the current color to be Tao red (RGB #AA0022).
+     module.TaoVisuals
+     **/
+    color "#AA0022"
+
+color "tao_orange" ->
+    /** Sets the current color to be Tao orange (RGB #DD3311).
+     module.TaoVisuals
+     **/
+    color "#DD3311"
+
+color "tao_yellow" ->
+    /** Sets the current color to be Tao yellow (RGB #EEAA11).
+     module.TaoVisuals
+     **/
+    color "#EEAA11"
+
+color "tao_green" ->
+    /** Sets the current color to be Tao green (RGB #88BB00).
+     module.TaoVisuals
+     **/
+    color "#88BB00"
+
+color "tao_sea" ->
+    /** Sets the current color to be Tao sea green (RGB #229988).
+     module.TaoVisuals
+     **/
+    color "#229988"
+
+color "tao_light_blue" ->
+    /** Sets the current color to be Tao light blue (RGB #3399FF).
+     module.TaoVisuals
+     **/
+    color "#3399FF"
+
+color "tao_dark_blue" ->
+    /** Sets the current color to be Tao dark blue (RGB #003366).
+     module.TaoVisuals
+     **/
+    color "#003366"
+
+color "tao_magenta"    ->
+    /** Sets the current color to be Tao magenta (RGB #CC0099).
+     module.TaoVisuals
+     **/
+    color "#CC0099"
+
+line_color "tao_red" ->
+    /** Sets the current line color to be Tao red (RGB #AA0022).
+     module.TaoVisuals
+     **/
+    line_color "#AA0022"
+
+line_color "tao_orange" ->
+    /** Sets the current line color to be Tao orange (RGB #DD3311).
+     module.TaoVisuals
+     **/
+    line_color "#DD3311"
+
+line_color "tao_yellow" ->
+    /** Sets the current line color to be Tao yellow (RGB #EEAA11).
+     module.TaoVisuals
+     **/
+    line_color "#EEAA11"
+
+line_color "tao_green" ->
+    /** Sets the current line color to be Tao green (RGB #88BB00).
+     module.TaoVisuals
+     **/
+    line_color "#88BB00"
+
+line_color "tao_sea" ->
+    /** Sets the current line color to be Tao sea green (RGB #229988).
+     module.TaoVisuals
+     **/
+    line_color "#229988"
+
+line_color "tao_light_blue" ->
+    /** Sets the current line color to be Tao light blue (RGB #3399FF).
+     module.TaoVisuals
+     **/
+    line_color "#3399FF"
+
+line_color "tao_dark_blue" ->
+    /** Sets the current line color to be Tao dark blue (RGB #003366).
+     module.TaoVisuals
+     **/
+    line_color "#003366"
+
+line_color "tao_magenta"    ->
+    /** Sets the current line color to be Tao magenta (RGB #CC0099).
+     module.TaoVisuals
+     **/
+    line_color "#CC0099"
 
 //
 // Internal
@@ -94,21 +198,3 @@ add_search_path "image:", module_dir & "/images"
 // Helpers
 tv_take_first (x, y) -> x
 tv_take_second (x, y) -> y
-
-// Official colors
-color "tao_red"        -> color "#AA0022"
-color "tao_orange"     -> color "#DD3311"
-color "tao_yellow"     -> color "#EEAA11"
-color "tao_green"      -> color "#88BB00"
-color "tao_sea"        -> color "#229988"
-color "tao_ligth_blue" -> color "#3399FF"
-color "tao_dark_blue"  -> color "#003366"
-color "tao_magenta"    -> color "#CC0099"
-line_color "tao_red"        -> line_color "#AA0022"
-line_color "tao_orange"     -> line_color "#DD3311"
-line_color "tao_yellow"     -> line_color "#EEAA11"
-line_color "tao_green"      -> line_color "#88BB00"
-line_color "tao_sea"        -> line_color "#229988"
-line_color "tao_ligth_blue" -> line_color "#3399FF"
-line_color "tao_dark_blue"  -> line_color "#003366"
-line_color "tao_magenta"    -> line_color "#CC0099"
