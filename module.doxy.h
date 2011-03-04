@@ -17,7 +17,7 @@
  * also in which language to display the logo (english or french).
  *
  * Here is an example:
- @verbatim
+ @code
 // taovisuals.ddd
 
 import TaoVisuals "0.1"
@@ -52,7 +52,7 @@ rectangle X, 0, W, 20
 color "tao_magenta"
 X += W
 rectangle X, 0, W, 20
- @endverbatim
+ @endcode
  *
  * Here is a screen capture of this document:
  * @image html "taovisuals.png" "Output from taovisuals.ddd"
