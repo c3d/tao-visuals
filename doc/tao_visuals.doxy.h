@@ -16,46 +16,11 @@
  * versions, so you can choose whether you want to show the tagline or not, and
  * also in which language to display the logo (english or french).
  *
- * Here is an example:
- @code
-// taovisuals.ddd
-
-import TaoVisuals "0.1"
-
-tv_taodyne_logo 0, 80, 200, 100
-tv_language := "fr"
-tv_tagline := "dev"
-tv_taodyne_logo 0, -80, 200, 100
-
-W := 25
-color "tao_red"
-X := -80
-rectangle X, 0, W, 20
-color "tao_orange"
-X += W
-rectangle X, 0, W, 20
-color "tao_yellow"
-X += W
-rectangle X, 0, W, 20
-color "tao_green"
-X += W
-rectangle X, 0, W, 20
-color "tao_sea"
-X += W
-rectangle X, 0, W, 20
-color "tao_light_blue"
-X += W
-rectangle X, 0, W, 20
-color "tao_dark_blue"
-X += W
-rectangle X, 0, W, 20
-color "tao_magenta"
-X += W
-rectangle X, 0, W, 20
- @endcode
+ * Here is an example (<a href="examples/tao_visuals.ddd">tao_visuals.ddd</a>):
+ * @include tao_visuals.ddd
  *
  * Here is a screen capture of this document:
- * @image html "taovisuals.png" "Output from taovisuals.ddd"
+ * @image html "tao_visuals.png" "Output from tao_visuals.ddd"
  * @{
  */
 
