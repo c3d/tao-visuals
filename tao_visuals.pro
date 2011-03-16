@@ -7,8 +7,8 @@
 # TaoVisuals is a collection of pictures and logos related to Tao Presentations
 #
 # ******************************************************************************
-# This software is property of Taodyne SAS - Confidential
-# Ce logiciel est la propriété de Taodyne SAS - Confidentiel
+# This document is released under the GNU General Public License.
+# See http://www.gnu.org/copyleft/gpl.html and Matthew 25:22 for details
 # (C) 2010 Jerome Forissier <jerome@taodyne.com>
 # (C) 2010 Taodyne SAS
 # ******************************************************************************
