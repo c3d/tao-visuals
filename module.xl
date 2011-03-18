@@ -8,15 +8,9 @@
 module_description
     id "6F1C6EE1-F153-4E57-8B46-CEFB7F7BD338"
     name "Tao visuals"
-    description "A collection of icons, logos, pictures and colors related to Taodyne and Tao Presentations."
+    description "A collection of icons, logos, pictures and colors related to Taodyne and Tao Presentations"
     import_name "TaoVisuals"
-    author "Taodyne SAS"
-    website "http://www.taodyne.com"
-    version 1.0
-
-module_description "fr",
-    name "Visuels Tao"
-    description "Un ensemble d'icônes, de logos, d'images et de couleurs relatives à Taodyne et Tao Presentations."
+    version "0.1"
 
 
 //
@@ -25,7 +19,6 @@ module_description "fr",
 
 // Preferred language.
 // Values: "en" (english), "fr" (french)
-tv_language -> ""
 tv_language := "en"
 
 // Choose the tagline under the Taodyne logo.
@@ -33,7 +26,6 @@ tv_language := "en"
 //   "geeks" Presentation Software for Geeks
 //   "dev"   Develop your ideas
 //   "none"  No tagline
-tv_tagline -> ""
 tv_tagline := "geeks"
 
 //
@@ -63,10 +55,9 @@ tv_taodyne_logo x:real, y:real, width:real, height:real ->
      **/
     locally
         color 1, 1, 1, 1
-        iw -> 0.0
-        ih -> 0.0
-        iw := tv_resize_x(width, height, tv_logo_native_x, tv_logo_native_y)
-        ih := tv_resize_y(width, height, tv_logo_native_x, tv_logo_native_y)
+        wh := tv_resize(width, height, tv_logo_native_x, tv_logo_native_y)
+        iw := tv_take_first wh
+        ih := tv_take_second wh
         image_px x, y, iw, ih, tv_logo_file
 
 // Tao logo color palette
@@ -172,7 +163,7 @@ line_color "tao_magenta"    ->
 //
 
 // "svg" or "png"
-tv_img_format -> "svg"
+tv_img_format := "svg"
 
 // Return the name of the Taodyne logo file, based on module settings
 // (language, etc.)
@@ -187,30 +178,23 @@ tv_logo_file ->
 
 // The native size (in pixels) of the logo
 tv_logo_size -> image_size tv_logo_file
-tv_logo_native_x -> tv_logo_size at 1
-tv_logo_native_y -> tv_logo_size at 2
+tv_logo_native_x -> tv_take_first tv_logo_size
+tv_logo_native_y -> tv_take_second tv_logo_size
 
 // Image resizing
 // Return (X, Y) with the same aspect ratio as (x, y) such that (X, Y) fits in
 // the (xmax, ymax) bounding box
-// FIXME does not work yet, need to split for now
-//tv_resize xmax:real, ymax:real, x:real, y:real ->
-//    r1 -> x/y
-//    r2 -> xmax/ymax
-//    if r1 > r2 then
-//        xmax, xmax*y/x
-//    else
-//        ymax*x/y, ymax
-tv_resize_x xmax:real, ymax:real, x:real, y:real ->
-    if (x/y) > (xmax/ymax) then
-        xmax
+tv_resize xmax:real, ymax:real, x:real, y:real ->
+    r1 := x/y
+    r2 := xmax/ymax
+    if r1 > r2 then
+        xmax, xmax*y/x
     else
-        ymax*x/y
-tv_resize_y xmax:real, ymax:real, x:real, y:real ->
-    if (x/y) > (xmax/ymax) then
-        xmax*y/x
-    else
-        ymax
+        ymax*x/y, ymax
 
 // Adding this module's images/ directory to the image: search path for the current document
 add_search_path "image:", module_dir & "/images"
+
+// Helpers
+tv_take_first (x, y) -> x
+tv_take_second (x, y) -> y
