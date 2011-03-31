@@ -10,7 +10,7 @@ module_description
     name "Tao visuals"
     description "A collection of icons, logos, pictures and colors related to Taodyne and Tao Presentations"
     import_name "TaoVisuals"
-    version "0.1"
+    version 1.0
 
 
 //
