@@ -1,6 +1,6 @@
 // taovisuals.ddd
 
-import TaoVisuals "0.1"
+import TaoVisuals 1.0
 
 tv_taodyne_logo 0, 80, 200, 100
 tv_language := "fr"
