@@ -55,10 +55,11 @@ tv_taodyne_logo x:real, y:real, width:real, height:real ->
      **/
     locally
         color 1, 1, 1, 1
-        iw -> 0.0
-        ih -> 0.0
+        iw -> 0
+        ih -> 0
         iw := tv_resize_x(width, height, tv_logo_native_x, tv_logo_native_y)
         ih := tv_resize_y(width, height, tv_logo_native_x, tv_logo_native_y)
+        // FIXME tv_logo_file is not built correctly
         image_px x, y, iw, ih, tv_logo_file
 
 // Tao logo color palette
