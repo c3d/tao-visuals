@@ -1,5 +1,7 @@
 import TaoVisuals 1.0
 
+tv_language := "en"
+tv_tagline := "geeks"
 tv_taodyne_logo 0, 80, 200, 100
 tv_language := "fr"
 tv_tagline := "dev"
