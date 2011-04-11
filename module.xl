@@ -19,14 +19,14 @@ module_description
 
 // Preferred language.
 // Values: "en" (english), "fr" (french)
-tv_language := "en"
+tv_language -> "en"
 
 // Choose the tagline under the Taodyne logo.
 // Values:
 //   "geeks" Presentation Software for Geeks
 //   "dev"   Develop your ideas
 //   "none"  No tagline
-tv_tagline := "geeks"
+tv_tagline -> "geeks"
 
 //
 // Commands
@@ -55,9 +55,10 @@ tv_taodyne_logo x:real, y:real, width:real, height:real ->
      **/
     locally
         color 1, 1, 1, 1
-        wh := tv_resize(width, height, tv_logo_native_x, tv_logo_native_y)
-        iw := tv_take_first wh
-        ih := tv_take_second wh
+        iw -> 0.0
+        ih -> 0.0
+        iw := tv_resize_x(width, height, tv_logo_native_x, tv_logo_native_y)
+        ih := tv_resize_y(width, height, tv_logo_native_x, tv_logo_native_y)
         image_px x, y, iw, ih, tv_logo_file
 
 // Tao logo color palette
@@ -163,7 +164,7 @@ line_color "tao_magenta"    ->
 //
 
 // "svg" or "png"
-tv_img_format := "svg"
+tv_img_format -> "svg"
 
 // Return the name of the Taodyne logo file, based on module settings
 // (language, etc.)
@@ -178,23 +179,30 @@ tv_logo_file ->
 
 // The native size (in pixels) of the logo
 tv_logo_size -> image_size tv_logo_file
-tv_logo_native_x -> tv_take_first tv_logo_size
-tv_logo_native_y -> tv_take_second tv_logo_size
+tv_logo_native_x -> tv_logo_size at 1
+tv_logo_native_y -> tv_logo_size at 2
 
 // Image resizing
 // Return (X, Y) with the same aspect ratio as (x, y) such that (X, Y) fits in
 // the (xmax, ymax) bounding box
-tv_resize xmax:real, ymax:real, x:real, y:real ->
-    r1 := x/y
-    r2 := xmax/ymax
-    if r1 > r2 then
-        xmax, xmax*y/x
+// FIXME does not work yet, need to split for now
+//tv_resize xmax:real, ymax:real, x:real, y:real ->
+//    r1 -> x/y
+//    r2 -> xmax/ymax
+//    if r1 > r2 then
+//        xmax, xmax*y/x
+//    else
+//        ymax*x/y, ymax
+tv_resize_x xmax:real, ymax:real, x:real, y:real ->
+    if (x/y) > (xmax/ymax) then
+        xmax
     else
-        ymax*x/y, ymax
+        ymax*x/y
+tv_resize_y xmax:real, ymax:real, x:real, y:real ->
+    if (x/y) > (xmax/ymax) then
+        xmax*y/x
+    else
+        ymax
 
 // Adding this module's images/ directory to the image: search path for the current document
 add_search_path "image:", module_dir & "/images"
-
-// Helpers
-tv_take_first (x, y) -> x
-tv_take_second (x, y) -> y
