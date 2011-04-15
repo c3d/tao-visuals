@@ -19,14 +19,16 @@ module_description
 
 // Preferred language.
 // Values: "en" (english), "fr" (french)
-tv_language -> "en"
+tv_language -> ""
+tv_language := "en"
 
 // Choose the tagline under the Taodyne logo.
 // Values:
 //   "geeks" Presentation Software for Geeks
 //   "dev"   Develop your ideas
 //   "none"  No tagline
-tv_tagline -> "geeks"
+tv_tagline -> ""
+tv_tagline := "geeks"
 
 //
 // Commands
