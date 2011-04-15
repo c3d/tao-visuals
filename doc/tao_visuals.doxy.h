@@ -1,3 +1,7 @@
+/*
+ * This file duplicates module.xl for documentation purposes.
+ */
+
 /**
  * @defgroup TaoVisuals Tao Visuals
  * @ingroup Modules
