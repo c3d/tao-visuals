@@ -17,7 +17,7 @@ MODINSTDIR = tao_visuals
 
 include(../modules.pri)
 
-OTHER_FILES = tao_visuals.xl
+OTHER_FILES = module.xl module.doxy.h
 
 PICTURES = \
     images/Taodyne_dev_en.png \
