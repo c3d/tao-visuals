@@ -8,11 +8,15 @@
 module_description
     id "6F1C6EE1-F153-4E57-8B46-CEFB7F7BD338"
     name "Tao visuals"
-    description "A collection of icons, logos, pictures and colors related to Taodyne and Tao Presentations"
+    description "A collection of icons, logos, pictures and colors related to Taodyne and Tao Presentations."
     import_name "TaoVisuals"
     author "Taodyne SAS"
     website "http://www.taodyne.com"
     version 1.0
+
+module_description "fr",
+    name "Visuels Tao"
+    description "Un ensemble d'icônes, de logos, d'images et de couleurs relatives à Taodyne et Tao Presentations."
 
 
 //
