@@ -17,7 +17,22 @@ MODINSTDIR = tao_visuals
 
 include(../modules.pri)
 
-OTHER_FILES = tao_visuals.xl
+OTHER_FILES = tao_visuals.xl \
+    images/Taodyne_picto.svg \
+    images/Taodyne_picto.png \
+    images/Taodyne_logo.svg \
+    images/Taodyne_logo.png \
+    images/Taodyne_icon.svg \
+    images/Taodyne_icon.png \
+    images/Taodyne_geeks_en.svg \
+    images/Taodyne_geeks_en.png \
+    images/Taodyne_dev_fr.svg \
+    images/Taodyne_dev_fr.png \
+    images/Taodyne_dev_en.svg \
+    images/Taodyne_dev_en.png \
+    doc/tao_visuals.png \
+    doc/tao_visuals.ddd \
+    icon.png
 
 PICTURES = \
     images/Taodyne_dev_en.png \
@@ -39,3 +54,6 @@ pics.files = $$PICTURES
 
 INSTALLS    += thismod_icon pics
 INSTALLS    -= thismod_bin
+
+HEADERS += \
+    doc/tao_visuals.doxy.h
