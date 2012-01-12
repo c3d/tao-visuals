@@ -1,6 +1,5 @@
 /**
- * @defgroup TaoVisuals Tao Visuals
- * @ingroup Modules
+ * @taomoduledescription{TaoVisuals, Tao Visuals}
  *
  * Graphical elements related to Taodyne and Tao Presentations.
  *
@@ -17,6 +16,8 @@
  *
  * Here is a screen capture of this document:
  * @image html "tao_visuals.png" "Output from tao_visuals.ddd"
+ *
+ * @endtaomoduledescription{TaoVisuals}
  * @{
  */
 
