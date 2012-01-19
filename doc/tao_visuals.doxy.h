@@ -132,8 +132,8 @@ color("tao_red");
 /**
  * @~english
  * Sets the current color to be Tao orange (RGB #DD3311).
- * Choisit la couleur de remplissage orange Tao (RVB #DD3311).
  * @~french
+ * Choisit la couleur de remplissage orange Tao (RVB #DD3311).
  */
 color("tao_orange");
 
