@@ -39,7 +39,6 @@
  * @image html "tao_visuals.png" "Visuels Tao"
  *
  * @endtaomoduledescription{TaoVisuals}
- * @~
  * @{
  */
 
