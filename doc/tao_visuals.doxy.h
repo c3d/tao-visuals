@@ -16,7 +16,7 @@
  * @include tao_visuals.ddd
  *
  * Here is a screen capture of this document:
- * @image html "tao_visuals.png" "Tao visuals"
+ * @image html "tao_visuals.png" "Output from tao_visuals.ddd"
  *
  * @endtaomoduledescription{TaoVisuals}
  *
