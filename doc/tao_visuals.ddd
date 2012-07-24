@@ -1,4 +1,4 @@
-import TaoVisuals 1.0
+import TaoVisuals
 
 tv_language := "en"
 tv_tagline := "geeks"
