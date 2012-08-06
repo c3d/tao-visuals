@@ -124,129 +124,129 @@ tv_taodyne_logo(real x, real y, real width, real height);
 
 /**
  * @~english
- * Sets the current color to be Tao red (RGB #AA0022).
+ * Sets the current color to be Tao red (RGB \#AA0022).
  * @~french
- * Choisit la couleur de remplissage rouge Tao (RVB #AA0022).
+ * Choisit la couleur de remplissage rouge Tao (RVB \#AA0022).
  */
 color("tao_red");
 
 /**
  * @~english
- * Sets the current color to be Tao orange (RGB #DD3311).
+ * Sets the current color to be Tao orange (RGB \#DD3311).
  * @~french
- * Choisit la couleur de remplissage orange Tao (RVB #DD3311).
+ * Choisit la couleur de remplissage orange Tao (RVB \#DD3311).
  */
 color("tao_orange");
 
 /**
  * @~english
- * Sets the current color to be Tao yellow (RGB #EEAA11).
+ * Sets the current color to be Tao yellow (RGB \#EEAA11).
  * @~french
- * Choisit la couleur de remplissage jaune Tao (RVB #EEAA11).
+ * Choisit la couleur de remplissage jaune Tao (RVB \#EEAA11).
  */
 color("tao_yellow");
 
 /**
  * @~english
- * Sets the current color to be Tao green (RGB #88BB00).
+ * Sets the current color to be Tao green (RGB \#88BB00).
  * @~french
- * Choisit la couleur de remplissage vert Tao (RVB #88BB00).
+ * Choisit la couleur de remplissage vert Tao (RVB \#88BB00).
  */
 color("tao_green");
 
 /**
  * @~english
- * Sets the current color to be Tao sea green (RGB #229988).
+ * Sets the current color to be Tao sea green (RGB \#229988).
  * @~french
- * Choisit la couleur de remplissage bleu-vert Tao (RVB #229988).
+ * Choisit la couleur de remplissage bleu-vert Tao (RVB \#229988).
  */
 color("tao_sea");
 
 /**
  * @~english
- * Sets the current color to be Tao light blue (RGB #3399FF).
+ * Sets the current color to be Tao light blue (RGB \#3399FF).
  * @~french
- * Choisit la couleur de remplissage bleu clair Tao (RVB #3399FF).
+ * Choisit la couleur de remplissage bleu clair Tao (RVB \#3399FF).
  */
 color("tao_light_blue");
 
 /**
  * @~english
- * Sets the current color to be Tao dark blue (RGB #003366).
+ * Sets the current color to be Tao dark blue (RGB \#003366).
  * @~french
- * Choisit la couleur de remplissage bleu foncé Tao (RVB #003366).
+ * Choisit la couleur de remplissage bleu foncé Tao (RVB \#003366).
  */
 color("tao_dark_blue");
 
 /**
  * @~english
- * Sets the current color to be Tao magenta (RGB #CC0099).
+ * Sets the current color to be Tao magenta (RGB \#CC0099).
  * @~french
- * Choisit la couleur de remplissage magenta Tao (RVB #CC0099).
+ * Choisit la couleur de remplissage magenta Tao (RVB \#CC0099).
  */
 color("tao_magenta");
 
 /**
  * @~english
- * Sets the current line color to be Tao red (RGB #AA0022).
+ * Sets the current line color to be Tao red (RGB \#AA0022).
  * @~french
- * Choisit la couleur de ligne rouge Tao (RVB #AA0022).
+ * Choisit la couleur de ligne rouge Tao (RVB \#AA0022).
  */
 line_color("tao_red");
 
 /**
  * @~english
- * Sets the current line color to be Tao orange (RGB #DD3311).
+ * Sets the current line color to be Tao orange (RGB \#DD3311).
  * @~french
- * Choisit la couleur de ligne orange Tao (RVB #DD3311).
+ * Choisit la couleur de ligne orange Tao (RVB \#DD3311).
  */
 line_color("tao_orange");
 
 /**
  * @~english
- * Sets the current line color to be Tao yellow (RGB #EEAA11).
+ * Sets the current line color to be Tao yellow (RGB \#EEAA11).
  * @~french
- * Choisit la couleur de ligne jaune Tao (RVB #EEAA11).
+ * Choisit la couleur de ligne jaune Tao (RVB \#EEAA11).
  */
 line_color("tao_yellow");
 
 /**
  * @~english
- * Sets the current line color to be Tao green (RGB #88BB00).
+ * Sets the current line color to be Tao green (RGB \#88BB00).
  * @~french
- * Choisit la couleur de ligne vert Tao (RVB #88BB00).
+ * Choisit la couleur de ligne vert Tao (RVB \#88BB00).
  */
 line_color("tao_green");
 
 /**
  * @~english
- * Sets the current line color to be Tao sea green (RGB #229988).
+ * Sets the current line color to be Tao sea green (RGB \#229988).
  * @~french
- * Choisit la couleur de ligne bleu-vert Tao (RVB #229988).
+ * Choisit la couleur de ligne bleu-vert Tao (RVB \#229988).
  */
 line_color("tao_sea");
 
 /**
  * @~english
- * Sets the current line color to be Tao light blue (RGB #3399FF).
+ * Sets the current line color to be Tao light blue (RGB \#3399FF).
  * @~french
- * Choisit la couleur de ligne bleu clair Tao (RVB #3399FF).
+ * Choisit la couleur de ligne bleu clair Tao (RVB \#3399FF).
  */
 line_color("tao_light_blue");
 
 /**
  * @~english
- * Sets the current line color to be Tao dark blue (RGB #003366).
+ * Sets the current line color to be Tao dark blue (RGB \#003366).
  * @~french
- * Choisit la couleur de ligne bleu foncé Tao (RVB #003366).
+ * Choisit la couleur de ligne bleu foncé Tao (RVB \#003366).
  */
 line_color("tao_dark_blue");
 
 /**
  * @~english
- * Sets the current line color to be Tao magenta (RGB #CC0099).
+ * Sets the current line color to be Tao magenta (RGB \#CC0099).
  * @~french
- * Choisit la couleur de ligne magenta Tao (RVB #CC0099).
+ * Choisit la couleur de ligne magenta Tao (RVB \#CC0099).
  */
 line_color("tao_magenta");
 
