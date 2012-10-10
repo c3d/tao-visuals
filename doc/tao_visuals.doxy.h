@@ -2,7 +2,7 @@
  * @~english
  * @taomoduledescription{TaoVisuals, Tao Visuals}
  *
- * <tt>import TaoVisuals</tt> - Graphical elements related to Taodyne and Tao Presentations.\n
+ * Graphical elements related to Taodyne and Tao Presentations.
  *
  * TaoVisuals is a collection of graphic elements related to Tao Presentations
  * and Taodyne. It contains pictures and color definitions.
@@ -23,7 +23,7 @@
  * @~french
  * @taomoduledescription{TaoVisuals, Visuels Tao}
  *
- * <tt>import TaoVisuals</tt> - Éléments graphique relatifs à Taodyne et Tao Presentations.\n
+ * Éléments graphique relatifs à Taodyne et Tao Presentations.
  *
  * TaoVisuals regroupe des éléments graphiques tels que des images et des
  * définitions de couleurs.
