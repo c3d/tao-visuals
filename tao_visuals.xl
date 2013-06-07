@@ -26,7 +26,6 @@ module_description "fr",
 // Preferred language.
 // Values: "en" (english), "fr" (french)
 tv_language -> ""
-tv_language := "en"
 
 // Choose the tagline under the Taodyne logo.
 // Values:
@@ -34,7 +33,6 @@ tv_language := "en"
 //   "dev"   Develop your ideas
 //   "none"  No tagline
 tv_tagline -> ""
-tv_tagline := "geeks"
 
 //
 // Commands
