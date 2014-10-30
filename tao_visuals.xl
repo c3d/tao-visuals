@@ -1,14 +1,14 @@
 // TaoVisuals module definition
 //
 // This module contains a number of graphical elements related to Taodyne
-// and Tao Presentations.
+// and Tao3D.
 //
 // Copyright 20010-2011 Taodyne
 
 module_description
     id "6F1C6EE1-F153-4E57-8B46-CEFB7F7BD338"
     name "Tao visuals"
-    description "A collection of icons, logos, pictures and colors related to Taodyne and Tao Presentations."
+    description "A collection of icons, logos, pictures and colors related to Taodyne and Tao3D."
     import_name "TaoVisuals"
     author "Taodyne SAS"
     website "http://www.taodyne.com"
@@ -16,7 +16,7 @@ module_description
 
 module_description "fr",
     name "Visuels Tao"
-    description "Un ensemble d'icônes, de logos, d'images et de couleurs relatives à Taodyne et Tao Presentations."
+    description "Un ensemble d'icônes, de logos, d'images et de couleurs relatives à Taodyne et Tao3D."
 
 
 //

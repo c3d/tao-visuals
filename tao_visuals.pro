@@ -4,7 +4,7 @@
 # File Description:
 # Qt build file for the TaoVisuals module
 #
-# TaoVisuals is a collection of pictures and logos related to Tao Presentations
+# TaoVisuals is a collection of pictures and logos related to Tao3D
 #
 # ******************************************************************************
 # This software is property of Taodyne SAS - Confidential
